@@ -1,21 +1,23 @@
 import React from "react";
 
-import "./Expenses";
+import "./Expenses.css";
 
 const TransactionItem = (props) => {
   return (
     <div className="transaction-list">
-      <div className="inner">
-        <div className="date">
-          <p>{props.date}</p>
-          <p>{props.day}</p>
+      <div className="row1">
+        <div className="column1">
+          <div className="date__div">
+            <p className="text-center pdate">{props.date}</p>
+            <p className="text-center pdate">{props.day}</p>
+          </div>
+          <div className="title">
+            {props.title}
+          </div>
         </div>
-        <div className="title">
-          <p>{props.title}</p>
+        <div className="price">
+          {props.price}
         </div>
-      </div>
-      <div className="price">
-        <p>{props.price}</p>
       </div>
     </div>
   );
