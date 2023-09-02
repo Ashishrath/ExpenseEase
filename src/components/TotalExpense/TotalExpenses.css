@@ -1,0 +1,15 @@
+.expenses {
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+  }
+
+.expense-label {
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    color: #A4A5A7;
+}

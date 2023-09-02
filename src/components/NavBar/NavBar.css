@@ -1,0 +1,17 @@
+.custom-navbar {
+    background-color: #070707; /* Your custom color here */
+  }
+  
+  /* Customize the color of the navbar links */
+  .custom-navbar .navbar-nav .nav-link {
+    color: #E5E5E6; /* Text color for the links */
+  }
+  
+  /* Customize the color of the brand/logo */
+  .custom-navbar .navbar-brand {
+    color: #E5E5E6; /* Text color for the brand/logo */
+  }
+
+  .btn_custom {
+    color: #E5E5E6;
+  }
