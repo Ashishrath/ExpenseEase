@@ -16,7 +16,7 @@ const TransactionItem = (props) => {
           </div>
         </div>
         <div className="price">
-          {props.price}
+        ₹ {props.price}
         </div>
       </div>
     </div>
