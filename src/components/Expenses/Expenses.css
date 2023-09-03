@@ -39,6 +39,9 @@
     justify-content: flex-end;
     padding: 1rem;
 }*/
+.label-recent-transaction {
+    color: #A4A5A7;
+}
 
 .transaction-list {
     margin: .8rem 0;

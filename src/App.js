@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import TotalExpenses from "./components/TotalExpense/TotalExpenses";
 import Expenses from "./components/Expenses/Expenses";
 import AddExpense from "./components/AddExpense/AddExpense";
+import Analytics from "./components/Analytics/Analytics";
 
 const DUMMY_EXPENSES = [
   {
@@ -60,7 +61,6 @@ function App() {
         />
       )}
       <TotalExpenses items={expenses} />
-
       <Expenses items={expenses} />
     </div>
   );

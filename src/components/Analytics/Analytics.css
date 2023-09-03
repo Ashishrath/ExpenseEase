@@ -1,0 +1,27 @@
+.analytics {
+    background-color: #070707;
+    color: #E5E5E6;
+    border-radius: 12px;
+    padding: 0.2rem 1rem 0.2rem;
+    margin-bottom: .5rem;
+}
+
+.row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: .4rem;
+}
+
+.dropdown-button {
+    background-color: #070707;
+}
+
+.dropdown-button:hover {
+    background-color: #E5E5E6;
+    color: #070707;
+}
+
+.col-analytics {
+    margin-top: .4rem;
+}
