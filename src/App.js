@@ -27,8 +27,6 @@ const DUMMY_EXPENSES = [
   },
 ];
 
-
-
 function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
@@ -38,17 +36,31 @@ function App() {
     });
   };
 
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+    addExpenseHandler(expenseData);
+  };
+
   const [formVisibility, setFormVisibility] = useState(false);
 
   const onAddForm = (status) => {
     setFormVisibility(status);
-  }
+  };
 
   return (
     <div>
       <NavBar formStatus={onAddForm} />
-      {formVisibility && <AddExpense formStatus={onAddForm} />}
-      <TotalExpenses />
+      {formVisibility && (
+        <AddExpense
+          formStatus={onAddForm}
+          onSaveExpenseData={saveExpenseDataHandler}
+        />
+      )}
+      <TotalExpenses items={expenses} />
+
       <Expenses items={expenses} />
     </div>
   );
