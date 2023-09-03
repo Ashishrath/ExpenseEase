@@ -1,8 +1,12 @@
 import React from "react";
 
 import "./Analytics.css";
+import AnalyticsBar from "./AnalyticsBar";
 
-const Analytics = () => {
+const Analytics = (props) => {
+    const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
+    const totalMaximum = Math.max(...dataPointValues);
+
   return (
     <div className="container-fluid analytics">
       <div className="row-top">
@@ -15,19 +19,28 @@ const Analytics = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              This week
+              This year
             </button>
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
-                This month
+                This year
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="row-bottom">Analytics</div>
+      <div className="row-bottom">
+      {props.dataPoints.map((dataPoint) => (
+        <AnalyticsBar
+          key={dataPoint.label}
+          value={dataPoint.value}
+          maxValue={totalMaximum}
+          label={dataPoint.label}
+        />
+      ))}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../TotalExpense/TotalExpenses.css";
 import "./Expenses.css";
 import TransactionItem from "./TransactionItem";
 import Analytics from "../Analytics/Analytics";
+import ExpensesAnalytics from "./ExpenseAnalytics";
 
 const dayName = [
      'Sun',
@@ -16,9 +17,19 @@ const dayName = [
 ];
 
 const Expenses = (props) => {
+  const [filteredYear, setFilteredYear] = useState();
+
+  // const filterChangeHandler = (selectedYear) => {
+  //   setFilteredYear(selectedYear);
+  // };
+
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString() === "2023";//filteredYear;
+  });
+
   return (
     <div className="expenses">
-      <Analytics />
+      <ExpensesAnalytics expenses={filteredExpenses} />
       <label className="label-recent-transaction">Recent Transaction</label>
       {props.items.map((expense) => (
         <TransactionItem

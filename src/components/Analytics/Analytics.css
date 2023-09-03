@@ -13,6 +13,14 @@
     margin-top: .4rem;
 }
 
+.row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: .4rem;
+    height: 10rem;
+}
+
 .dropdown-button {
     background-color: #070707;
 }
